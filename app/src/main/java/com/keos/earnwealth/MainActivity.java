@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.keos.earnwealth.tryit.Main;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText Username,Password;
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
 //             if(Name=="admin@gmail.com"||Pass=="admin@123")
           //  {
-                Intent nextactivity=new Intent(MainActivity.this,SearchListView.class);
+                Intent nextactivity=new Intent(MainActivity.this, Main.class);
                 startActivity(nextactivity);
                 Toast.makeText(MainActivity.this,"Successfully login",Toast.LENGTH_LONG).show();
 //            }

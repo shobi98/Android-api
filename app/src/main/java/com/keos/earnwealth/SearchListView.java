@@ -46,7 +46,7 @@ public class SearchListView extends AppCompatActivity {
             HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
 
-            String url = "http://uat.ews.earnwealth.in/task/public/api/taskview";
+            String url = "http://api.androidhive.info/contacts/";
             String jsonStr = sh.makeServiceCall(url);
 
             Log.e(TAG, "Response from url: " + jsonStr);
@@ -56,9 +56,11 @@ public class SearchListView extends AppCompatActivity {
 
                     // Getting JSON Array node
                     JSONArray contacts = jsonObj.getJSONArray("contacts");
+                    ArrayList<HashMap<String, String>> userList = new ArrayList<>();
 
                     // looping through All Contacts
                     for (int i = 0; i < contacts.length(); i++) {
+                        HashMap<String,String> user = new HashMap<>();
                         JSONObject c = contacts.getJSONObject(i);
                         String id = c.getString("id");
                         String name = c.getString("name");

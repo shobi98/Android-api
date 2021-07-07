@@ -21,7 +21,8 @@
 
 
         <activity android:name=".SearchListView" />
-
+<activity android:name=".tryit.Main"></activity>
+        <activity android:name=".tryit.UserData"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
